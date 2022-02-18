@@ -14,8 +14,7 @@ public class SmartHomeTest {
 
         new SmartHome().run(bulb, toggle);
 
-        assertTrue(bulb.turnBulbOnWasCalled());
-        assertFalse(bulb.turnBulbOffWasCalled());
+        bulb.bulbTurnedOnCorrectly();
     }
 
     @Test
@@ -25,7 +24,6 @@ public class SmartHomeTest {
 
         new SmartHome().run(bulb, toggle);
 
-        assertTrue(bulb.turnBulbOffWasCalled());
-        assertFalse(bulb.turnBulbOnWasCalled());
+        bulb.bulbTurnedOffCorrectly();
     }
 }
