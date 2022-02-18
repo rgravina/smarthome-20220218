@@ -15,4 +15,8 @@ public class SmartHomeTest {
 
         assertTrue(bulb.turnBulbOnWasCalled());
     }
+
+    @Test
+    void whenSwitchIsOff_turnBulbOff() {
+    }
 }

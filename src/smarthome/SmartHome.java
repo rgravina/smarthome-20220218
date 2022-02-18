@@ -11,5 +11,8 @@ interface Switch {
 
 public class SmartHome {
     void run(Bulb bulb, Switch toggle) {
+        if (toggle.isOn()) {
+            bulb.turnOn();
+        }
     }
 }
