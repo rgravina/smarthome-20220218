@@ -18,5 +18,11 @@ public class SmartHomeTest {
 
     @Test
     void whenSwitchIsOff_turnBulbOff() {
+        BulbSpy bulb = new BulbSpy();
+        Switch toggle = new AlwaysOffSwitchStub();
+
+        new SmartHome().run(bulb, toggle);
+
+        assertTrue(bulb.turnBulbOffWasCalled());
     }
 }
