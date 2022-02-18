@@ -3,6 +3,7 @@ package smarthome;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SmartHomeTest {
@@ -14,6 +15,7 @@ public class SmartHomeTest {
         new SmartHome().run(bulb, toggle);
 
         assertTrue(bulb.turnBulbOnWasCalled());
+        assertFalse(bulb.turnBulbOffWasCalled());
     }
 
     @Test
@@ -24,5 +26,6 @@ public class SmartHomeTest {
         new SmartHome().run(bulb, toggle);
 
         assertTrue(bulb.turnBulbOffWasCalled());
+        assertFalse(bulb.turnBulbOnWasCalled());
     }
 }
